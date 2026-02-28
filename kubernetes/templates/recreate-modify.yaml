@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: drureplicas
+  name: drureplicas
+spec:
+  replicas: 10
+  selector:
+    matchLabels:
+      app: dru-replicas
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: dru-replicas
+    spec:
+      containers:
+      - image: httpd:alpine3.24
+        name: httpd
+        resources: {}
+status: {}
