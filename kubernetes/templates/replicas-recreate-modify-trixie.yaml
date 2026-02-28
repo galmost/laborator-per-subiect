@@ -17,7 +17,7 @@ spec:
         app: dru-replicas
     spec:
       containers:
-      - image: httpd:alpine3.24
+      - image: httpd:2.4-trixie
         name: httpd
         resources: {}
 status: {}
