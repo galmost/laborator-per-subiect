@@ -29,6 +29,26 @@ The service unit is symlinked as follows:
 /etc/systemd/system/touchegg.service -> /usr/lib/systemd/system/touchegg.service
 ```
 
+## 📱 Autostart Configuration (Optional)
+
+To automatically start Touchégg when you log in to your desktop session, you can use the autostart mechanism:
+
+```bash
+# Create autostart directory if it doesn't exist
+mkdir -p ~/.config/autostart
+
+# Create the autostart desktop file
+cat > ~/.config/autostart/touchegg.desktop << EOF
+[Desktop Entry]
+Type=Application
+Name=Touchegg Client
+Exec=touchegg
+X-GNOME-Autostart-enabled=true
+EOF
+```
+
+This will start Touchégg automatically when you log in to your GNOME (or compatible) desktop environment.
+
 ## 📂 Configuration Locations
 
 | Scope       | Path                              |
