@@ -2,15 +2,21 @@
 
 Zsh is a powerful shell that provides enhanced features over bash, including better tab completion, plugin support, and theming capabilities. Powerlevel10k is a fast and flexible prompt theme that gives you a beautiful, informative, and customizable spaceship-style prompt.
 
+
+## Revert
+
+# Set Bash as default shell
+```
+chsh -s /usr/bin/bash
+```
+
 ## 📦 Installation
 
 ```bash
 # Install Zsh
 sudo pacman -S zsh
-
-# Set Zsh as default shell
-chsh -s /usr/bin/zsh
 ```
+
 
 ## 🎨 Powerlevel10k Setup
 
