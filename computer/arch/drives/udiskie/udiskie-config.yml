@@ -39,9 +39,9 @@ program_options:
   # Device options
   device_options:
     # Automatically mount these devices on startup
-    auto_mount:
-      - /dev/sda1
-      - /dev/sdb1
+    #auto_mount:
+    #  - /dev/sda1
+    #  - /dev/sdb1
 
     # Ignore these devices
     ignore:
