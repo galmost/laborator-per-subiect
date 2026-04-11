@@ -1,0 +1,60 @@
+# Udiskie Configuration File
+# Place this in ~/.config/udiskie/config.yml
+
+program_options:
+  # Show tray icon
+  tray: true
+
+  # Automount options
+  automount: true
+  automount_open: false
+
+  # Notification settings
+  notify: true
+  notify_all: false
+
+  # File manager to use (options: thunar, nautilus, dolphin, pcmanfm, etc.)
+  file_manager: thunar
+
+  # Mount options for different filesystems
+  mount_options:
+    # Default mount options
+    defaults:
+      - noatime
+      - nodiratime
+
+    # NTFS specific options
+    ntfs:
+      - windows_names
+      - uid=1000
+      - gid=1000
+
+    # FAT32 specific options
+    vfat:
+      - uid=1000
+      - gid=1000
+      - utf8
+      - shortname=mixed
+
+  # Device options
+  device_options:
+    # Automatically mount these devices on startup
+    auto_mount:
+      - /dev/sda1
+      - /dev/sdb1
+
+    # Ignore these devices
+    ignore:
+      - /dev/loop*
+      - /dev/sr*
+
+  # Advanced settings
+  advanced:
+    # Use udisks2 instead of udisks1
+    use_udisks2: true
+
+    # Timeout for mount operations (in seconds)
+    mount_timeout: 30
+
+    # Enable debug logging
+    debug: false

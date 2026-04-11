@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Udiskie
+Exec=udiskie --tray
+X-GNOME-Autostart-enabled=true
